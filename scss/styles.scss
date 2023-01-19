@@ -1,0 +1,52 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.icon--size{
+    font-size: 2.5rem;
+}
+
+.badge--size{
+    font-size: 0.5rem;
+}
+
+$background_color_transparency: rgba(225, 227, 231, 0.5);
+/*Se coloca imagen de fondo en el body y con una opacidad de 0.5 para que se vea transparente y resalte texto*/
+.body--background{
+    background: linear-gradient($background_color_transparency,$background_color_transparency), url(../imagenes/libreria2.jpg);
+    background-size: cover;
+}
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(12rem, 1fr))[auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-gap: 2.5rem 2.5rem;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
+    width: 100%;
+}
+
+input[type="number"]{
+    width: 40%;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container-num{
+    width: 55%;
+}
+
+.filtro{
+    display: none;
+}
+
+body.swal2-shown > [aria-hidden="true"] {
+    transition: 0.1s filter;
+    filter: blur(10px);
+}  
